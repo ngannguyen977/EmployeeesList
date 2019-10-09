@@ -41,7 +41,6 @@ function loadPage(page, pageElement) {
 
 		$(this).appendTo(pageElement);
 
-
 		// Remove the loader indicator
 		
 		pageElement.find('.loader').remove();
