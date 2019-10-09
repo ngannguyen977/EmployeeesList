@@ -7,11 +7,13 @@ body{
 	padding:0;
 	background:url('../pics/bg.jpg')no-repeat;
 	background-size: cover;
-	height: 100vh
+	height: 100vh;
+	position: relative;
+	width: 100%;
 }
 
 .flipbook-viewport{
-	position: absolute;
+	/* position: absolute; */
 	width:100%;
 	height:100%;
 	top: 0px;
@@ -19,18 +21,17 @@ body{
 }
 
 .flipbook-viewport .container{
-	position:absolute;
-	margin:auto;
+	
 	width: 100%;
 	height: 100%;
 }
 
-.flipbook-viewport .flipbook{
+/* .flipbook-viewport .flipbook{
 	width:922px;
 	height:600px;
 	position: absolute;
 	background: none;
-}
+} */
 .flipbook-viewport .page{
 	width:461px;
 	height:600px;
@@ -47,18 +48,12 @@ body{
 	box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
-/*
-.flipbook-viewport .page img{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin:0;
+.dis{
+	position: absolute;
+	position: absolute;
+    right: 10%;
+    top: 8%;
 }
-*/
-
 .flipbook-viewport .shadow{
 	-webkit-transition: -webkit-box-shadow 0.5s;
 	-moz-transition: -moz-box-shadow 0.5s;
@@ -102,13 +97,8 @@ body{
 .hide_text{
 	display: none;
 } 
-/*
-.cover{
-	width: 100%;
-	height: 100%;
-	background: red
-}*/
-.fl-position {
+
+/* .fl-position {
 	width: 1100px;
 	height: 780px;
 	background: none;
@@ -116,3 +106,4 @@ body{
 	top: 10%;
 	left: 30%
 }
+ */
