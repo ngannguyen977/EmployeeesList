@@ -7,59 +7,22 @@ body{
 	padding:0;
 	background:url('../pics/bg.jpg')no-repeat;
 	background-size: cover;
-	height: 100vh
-}
-
-.flipbook-viewport{
-	position: absolute;
-	width:100%;
-	height:100%;
-	top: 0px;
-	left: 0px
-}
-
-.flipbook-viewport .container{
-	position:absolute;
-	margin:auto;
+	height: 100vh;
+	position: relative;
 	width: 100%;
-	height: 100%;
+}
+body.hide-overflow {
+    overflow: hidden;
 }
 
-.flipbook-viewport .flipbook{
-	width:922px;
-	height:600px;
-	position: absolute;
-	background: none;
-}
-.flipbook-viewport .page{
-	width:461px;
-	height:600px;
-	background-color:white;
-	background-repeat:no-repeat;
-	background-size:100% 100%;
-}
-
-.flipbook .page{
+.page{
 	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
 	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
 	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
 	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
 	box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
-
-/*
-.flipbook-viewport .page img{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin:0;
-}
-*/
-
-.flipbook-viewport .shadow{
+.shadow{
 	-webkit-transition: -webkit-box-shadow 0.5s;
 	-moz-transition: -moz-box-shadow 0.5s;
 	-o-transition: -webkit-box-shadow 0.5s;
@@ -71,13 +34,52 @@ body{
 	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
 	box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
+/* helpers */
 
+.t {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.tc {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.rel {
+    position: relative;
+}
+
+/* book */
+
+.book {
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.book .page {
+    height: 100%;
+}
+
+.book .page img {
+    max-width: 100%;
+    height: 100%;
+}
 /*My CSS*/
 .lbl-calendar{
 	position: absolute;
     left: 0;
     top: -5px;
-    padding-top: 60px !important;
+    padding-top: 60px;
     border: 4px solid #fff;
     margin-left: 10%;
     padding: 15px;
@@ -102,17 +104,38 @@ body{
 .hide_text{
 	display: none;
 } 
-/*
-.cover{
-	width: 100%;
-	height: 100%;
-	background: red
-}*/
-.fl-position {
-	width: 1100px;
-	height: 780px;
-	background: none;
+
+@media screen and (max-width:1200px){
+.lbl-calendar{
 	position: absolute;
-	top: 10%;
-	left: 30%
+    left: 0;
+    top: -5px;
+    padding-top: 40px !important;
+    border: 4px solid #fff;
+    margin-left: 5%;
+    padding: 15px;
+}
+.txt-desc{
+	width: 30%;
+	left: 5%;
+	font-size: 18px;
+	padding: 30px
+}
+}
+@media screen and (max-width:900px){
+.lbl-calendar{
+    border: 2px solid #fff;
+}
+.lbl-calendar span{
+	color: #fff;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.txt-desc{
+	width: 30%;
+	left: 5%;
+	font-size: 16px;
+	padding: 30px
+}
 }
