@@ -3,18 +3,44 @@
 body{
 	overflow:hidden;
 	background-color:#fcfcfc;
-	margin:0;
+	margin:0 auto;
 	padding:0;
 	background:url('../pics/bg.jpg')no-repeat;
 	background-size: cover;
 	height: 100vh;
 	position: relative;
 	width: 100%;
+	max-height: 900px
 }
 body.hide-overflow {
     overflow: hidden;
 }
+.tracking-point{
+    position: absolute;
+    right: 0px;
+	height: 5px;
+	width: 5px;
+	background: none
+}
 
+.btn-click{
+    position: absolute;
+    z-index: 100;
+    transform: scale(1);
+	display: block;
+}
+.btn-click img:nth-child(1){
+    position: absolute;
+    width: 80px;
+    right: -20px;
+    top: 20px
+}
+.btn-click img:nth-child(2){
+    position: absolute;
+    width: 30px;
+    transform: rotateZ(90deg);
+    right: 80px;
+}
 .page{
 	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
 	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
@@ -104,7 +130,25 @@ body.hide-overflow {
 .hide_text{
 	display: none;
 } 
-
+@media screen and (max-width:1440px){
+.btn-click{
+    position: absolute;
+    z-index: 100;
+    transform: scale(1);
+}
+.btn-click img:nth-child(1){
+    position: absolute;
+    width: 80px;
+    right: 270px;
+    top: 20px
+}
+.btn-click img:nth-child(2){
+    position: absolute;
+    width: 30px;
+    transform: rotateZ(-90deg);
+    right: 210px;
+}
+}
 @media screen and (max-width:1200px){
 .lbl-calendar{
 	position: absolute;
@@ -120,6 +164,27 @@ body.hide-overflow {
 	left: 5%;
 	font-size: 18px;
 	padding: 30px
+}
+}
+@media screen and (max-width:1050px){
+.btn-click{
+    position: absolute;
+    z-index: 100;
+    transform: scale(1);
+}
+.btn-click img:nth-child(1){
+    position: absolute;
+    width: 80px;
+    right: 120px;
+    top: -90px;
+	
+}
+.btn-click img:nth-child(2){
+    position: absolute;
+    width: 30px;
+    transform: rotateZ(0deg);
+    right: 143px;
+	top: -65px
 }
 }
 @media screen and (max-width:900px){
