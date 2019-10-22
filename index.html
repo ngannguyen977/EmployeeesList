@@ -130,6 +130,14 @@
 			   		$(".txt-desc, .lbl-calendar, .btn-click").removeClass("hide_text");
 					F=0;
 			   }
+//			else if(pageX==1 && Fx==0){
+//			   		$(".txt-desc, .lbl-calendar").addClass("hide_text");
+//					Fx=1;
+//					}
+//			else if(pageX==1 && Fx==1){
+//			   		$(".txt-desc, .lbl-calendar").removeClass("hide_text");
+//					Fx=0;
+//			   };
 			console.log(pageX)
 			
 		});
@@ -143,6 +151,14 @@
 			$(".btn-click").css({"top":by,"left":bx+150})
 			console.log("Top: " + by + " Left: " + bx);
 		}); 
+		
+//		$( ".btn-click" ).hover(
+//			function() {
+//				$(".btn-click").fadeOut()
+//			}, function() {
+//				$(".btn-click").fadeIn()
+//			}
+//		);
 		
 	});
 </script>
